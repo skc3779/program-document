@@ -8,8 +8,8 @@ PDF파일 다음클라우드에 등록
 1. spring boot 참을수 없는 가벼움.
    [github sample](https://github.com/bungubbang/springcamp2014-boot-war)
 
-2. 설계도구 실전 활용 사례 발표자료.
-
+2. 설계도구 실전 활용 사례 발표자료
+3. 
 3. Neo4j로 만들어보는 LOL 전적검색 발표자료
     [Prezi](http://prezi.com/kkclhbv6spcr/neo4j/) : http://prezi.com/kkclhbv6spcr/neo4j/
 
