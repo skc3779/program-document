@@ -280,7 +280,6 @@ my-workspace/theme-app-demo/app/app.json 을 오픈하고
  */
 "theme": "first-custom-theme",
 ```
-
 ### Custom Theme 빌드한 다음에 Watch를 통해 실행해 보기
 
 이제 수정한  Package 를 first-custom-theme 폴더에서 package build 해 주고,  theme-app-demo 폴더에서 app build 를 해준다음에
@@ -296,6 +295,10 @@ $ pwd
 $ sencha app build
 $ sencha app watch
 ```
+
+실행한 모습
+
+![테마변경된 애플리케이션 모습](images/completebroweserurl.jpg)
 
 ### Sencha 애플리케이션 시작
 
