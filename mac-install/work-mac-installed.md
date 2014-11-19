@@ -1,4 +1,4 @@
-# [ .bash_profile ]
+## [ .bash_profile ]
 
 export GRADLE_HOME=/Users/seokangchun/gradle-1.12
 export PYTHONSTARTUP=$HOME/.pythonstartup.py
@@ -9,8 +9,7 @@ export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export PATH=$PATH:$GRADLE_HOME/bin:$JAVA_HOME:/usr/bin:/usr/local/bin
 
 
-
-# [ yeoman을 이용해 angular front end 개발을 위한 설정방법 ]
+## [ yeoman을 이용해 angular front end 개발을 위한 설정방법 ]
 
 1) nodejs 설치
 1.1) /usr/local/bin/node 에 노드 설치
@@ -22,7 +21,6 @@ export PATH=$PATH:$GRADLE_HOME/bin:$JAVA_HOME:/usr/bin:/usr/local/bin
 
 3) jdk1.8 설치
 3.1) 설치위치 /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
-
 
 4) webstorm 에서 yeoman, bower, grunt 설치
 $ sudo npm install -g yo
@@ -46,8 +44,24 @@ $ sudo npm install karma-jasmine@2_0 --save-dev  > 2.0 버전 설치
 
 위의 지금까지 설치한 모듈들은 /usr/local/lib/node_modules 밑에 설치되어 있다
 
+## [ nodeJS Update 방법 ]
 
-# [ brew를 설치 ]
+node 버전확인
+
+```console
+node -v
+```
+
+
+node 업그레이드
+
+```console
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
+
+## [ brew를 설치 ]
 
 맥용 패키지를 설치하기 위한 홈브루(Homebrew)를 설치하기
 
@@ -131,16 +145,66 @@ $> ps -ef | grep nginx
 $> ps -ef | grep nginx | wc -l
 ```
 
-# [ Redis 설치 ]
+## [ Redis 설치 ]
 
-### brew를 이용한 설치
+#### brew를 이용한 설치
+
+설치방법
 
 ```console
 brew install redis
 ```
 
+설치위치
+```console
+/usr/local/etc/redis.conf : confiuration 파일
+/usr/local/Cellar/redis/2.8.17  : 설치위치
+```
 
+서비실행방법
 
+```console
+$> redis-server
 
+[3851] 19 Nov 16:07:39.032 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[3851] 19 Nov 16:07:39.034 * Increased maximum number of open files to 10032 (it was originally set to 2560).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 2.8.17 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in stand alone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 3851
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[3851] 19 Nov 16:07:39.035 # Server started, Redis version 2.8.17
+[3851] 19 Nov 16:07:39.035 * DB loaded from disk: 0.000 seconds
+[3851] 19 Nov 16:07:39.035 * The server is now ready to accept connections on port 6379
+
+```
+
+클라이언트접속방법
+```console
+$> redis-cli
+
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379> set foo bar
+OK
+127.0.0.1:6379> get foo
+"bar"
+
+```
+
+### [ I/O Docs  설치 ]
 
 
