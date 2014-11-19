@@ -70,7 +70,7 @@ OS X용 패키지 관리자인 Homebrew 설치하기
 - 한글 사이트: http://brew.sh/index_ko.html
 
 설치는 간단하다. 터미널에서 다음을 실행한다.
-```
+```console
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
@@ -105,14 +105,14 @@ http://opentutorials.org/module/384/3462
 
 설치정보
 
-```
+```console
 설치위치 : /usr/local/Cellar/nginx/1.6.1_1
 환경파일 : /usr/local/etc/nginx/nginx.conf
 Doc폴더  : /usr/local/var/www
 ```
 
 환경설정 정보 (자세한 사항을 내용확인 요!!!)
-```
+```console
 환경폴더 : /usr/local/etc/nginx
 기본 환경 파일 : nginx.conf
 웹사이트별 파일중 PC-Web 사이트 파일 : fms-public.conf
