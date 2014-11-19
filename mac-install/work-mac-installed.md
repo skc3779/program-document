@@ -207,4 +207,22 @@ OK
 
 ### [ I/O Docs  설치 ]
 
+설치위치
+```console
+/Users/seokangchun/githubFriends/iodocs
+```
+
+PC 설치방법
+```console
+git clone http://github.com/mashery/iodocs.git
+cd iodocs
+npm install
+```
+
+실행방법
+```console
+$> redis-server : Run a Redis instance
+$> npm start (*nix, Mac OSX) 
+$> npm run-script startwin (Windows)
+```
 
