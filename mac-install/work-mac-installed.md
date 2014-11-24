@@ -226,3 +226,89 @@ $> npm start (*nix, Mac OSX)
 $> npm run-script startwin (Windows)
 ```
 
+### [VertX 설치]
+
+설치위치
+
+```console
+$> /Users/seokangchun/Libraries/vert.x-2.1.5/bin
+```
+
+.bash_profiles 추가
+
+```txt
+# VertX Adapting
+export PATH="/Users/seokangchun/Libraries/vert.x-2.1.5/bin:$PATH"
+```
+
+```console
+$> vertx version
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+2.1.5 (built 2014-11-13 15:15:56)
+
+```
+
+소스코드
+
+```
+/Users/seokangchun/webstormSample/vertx-books
+```
+
+vert 실행
+
+```console
+$> vertx run app.js[:자바소스]
+```
+
+### [MogoDB 설치]
+
+OS X: HomeBrew 또는 MacPorts로 설치하기
+
+http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/
+
+MongoDB 바이너리 설치
+
+```console
+$> brew install mongodb
+```
+
+SSL 지원 MongoDB 바이너리 설치
+
+```console
+$> brew install mongodb --with-openssl
+```
+
+설치위치
+
+```console
+/usr/local/Cellar/mongodb/2.6.5  : 설치위치
+/usr/local/etc/mongod.conf :  configuration 파일
+```
+
+기본 데이터베이스 위치 : /usr/local/var/mongodb
+
+```console
+$> cat mongod.conf
+systemLog:
+  destination: file
+  path: /usr/local/var/log/mongodb/mongo.log
+  logAppend: true
+storage:
+  dbPath: /usr/local/var/mongodb
+net:
+  bindIp: 127.0.0.1
+```
+
+mongodb config 를 이용한 실행
+
+```console
+$> mongod -f /usr/local/etc/mongod.conf
+```
+
+mongodb 데이터베이스 직접 지정실행
+
+```console
+$> mongod --dbpath <path to data directory>
+$> mongod --dbpath /usr/local/var/mongodb
+```
+
