@@ -260,6 +260,9 @@ vert 실행
 $> vertx run app.js[:자바소스]
 ```
 
+버텍스 모듈 레지스트리에 있는 모든 모듈을 확인
+http://modulereg.vertx.io
+
 ### [MogoDB 설치]
 
 OS X: HomeBrew 또는 MacPorts로 설치하기
@@ -305,10 +308,52 @@ mongodb config 를 이용한 실행
 $> mongod -f /usr/local/etc/mongod.conf
 ```
 
-mongodb 데이터베이스 직접 지정실행
+mongodb 데이터베이스 폴더 직접 지정실행
 
 ```console
 $> mongod --dbpath <path to data directory>
 $> mongod --dbpath /usr/local/var/mongodb
+
+2014-11-24T17:29:19.541+0900 [initandlisten] MongoDB starting : pid=8003 port=27017 dbpath=/usr/local/var/mongodb 64-bit host=seokangchun-ui-iMac.local
+2014-11-24T17:29:19.542+0900 [initandlisten] db version v2.6.5
+2014-11-24T17:29:19.542+0900 [initandlisten] git version: nogitversion
+2014-11-24T17:29:19.542+0900 [initandlisten] build info: Darwin miniyosemite.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-11-24T17:29:19.542+0900 [initandlisten] allocator: tcmalloc
+2014-11-24T17:29:19.542+0900 [initandlisten] options: { storage: { dbPath: "/usr/local/var/mongodb" } }
+2014-11-24T17:29:19.589+0900 [initandlisten] journal dir=/usr/local/var/mongodb/journal
+2014-11-24T17:29:19.589+0900 [initandlisten] recover : no journal files present, no recovery needed
+2014-11-24T17:29:19.642+0900 [initandlisten] waiting for connections on port 27017
 ```
 
+설치이후 console 를 이용한 사용방법
+
+```console
+$> mongo
+
+MongoDB shell version: 2.6.5
+connecting to: test
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	http://docs.mongodb.org/
+Questions? Try the support group
+	http://groups.google.com/group/mongodb-user
+    
+```
+
+버텍스 모듈 레지스트리에 있는 모든 모듈을 확인
+http://modulereg.vertx.io
+
+검색을 통해 github에 있는 MongoDB Persistor 설치
+https://github.com/vert-x/mod-mongo-persistor
+
+2014/11/24일 현재 javascript 모듈버전
+
+```javascript
+container.deployModule("io.vertx~mod-mongo-persistor~2.1.0", {
+  port: 8000,
+  host: "localhost",
+  bridge: true,
+  inbound_permitted: []
+});
+```
