@@ -1,12 +1,14 @@
 ## [ .bash_profile ]
 
+```txt
 export GRADLE_HOME=/Users/seokangchun/gradle-1.12
 export PYTHONSTARTUP=$HOME/.pythonstartup.py
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
 export CATALINA_HOME=/Users/seokangchun/tomcat-7.0.47
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-
 export PATH=$PATH:$GRADLE_HOME/bin:$JAVA_HOME:/usr/bin:/usr/local/bin
+export PATH="/Users/seokangchun/Libraries/vert.x-2.1.5/bin:$PATH"
+```
 
 
 ## [ yeoman을 이용해 angular front end 개발을 위한 설정방법 ]
