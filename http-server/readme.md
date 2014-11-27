@@ -46,10 +46,24 @@ $> python -m http.server 8888
 
 ## Jetty Runner
 
+인스톨과 Jetty 배포 없이 당신의 webapp 실행을 위한 빠르고 쉽운 방법을 제공하니 Jetty Runner를 사용하세요.
+
+사이트 : https://wiki.eclipse.org/Jetty/Howto/Using_Jetty_Runner
+
+다운로드 : 
+http://repo2.maven.org/maven2/org/mortbay/jetty/jetty-runner/
+http://mvnrepository.com/artifact/org.mortbay.jetty/jetty-runner/
+
 실행방법
 
 ```cmd
 java -jar jetty-runner-9.3.0.M0.jar  --port 8080
+```
+
+도움말
+
+```cmd
+java -jar jetty-runner.jar --help
 ```
 
 ## Grunt web Server 
@@ -99,7 +113,7 @@ Senchar Cmd는 당신의 Sencha 프로젝트의 라이프사이클 관리기능�
 
 ```cmd
 $> sencha web start
-$> sencha web start --port 8000  ( 수정포트)
+$> sencha web start --port 8000  (수정포트)
 ```
 
 ```cmd
