@@ -9,8 +9,6 @@ export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export PATH=$PATH:$GRADLE_HOME/bin:$JAVA_HOME:/usr/bin:/usr/local/bin
 export PATH="/Users/seokangchun/Libraries/vert.x-2.1.5/bin:$PATH"
 ```
-
-
 ## [ yeoman을 이용해 angular front end 개발을 위한 설정방법 ]
 
 1) nodejs 설치
@@ -209,6 +207,9 @@ OK
 
 ### [ I/O Docs  설치 ]
 
+사이트 
+https://github.com/mashery/iodocs
+
 설치위치
 ```console
 /Users/seokangchun/githubFriends/iodocs
@@ -227,6 +228,15 @@ $> redis-server : Run a Redis instance
 $> npm start (*nix, Mac OSX) 
 $> npm run-script startwin (Windows)
 ```
+
+참고자료
+
+* 블로그
+> I/O Docs를 사용한 API 문서화 http://blog.outsider.ne.kr/990
+
+* Swagger
+> 모델에 대한 약간의 코드를 작성하고 이를 기반으로 자동으로 API문서를 만들어 주는 방식이고 스프링 MVC등에서 자동으로 뽑아낼 수 있게 플러그 제공
+> http://swagger.io/
 
 ### [VertX 설치]
 
