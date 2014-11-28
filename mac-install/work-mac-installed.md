@@ -16,11 +16,24 @@ export PATH="/Users/seokangchun/Libraries/vert.x-2.1.5/bin:$PATH"
 1.2) /usr/local/bin/npm 에  npm 설치
 1.3) .bash_profile 의 $PATH에 경로 등록
 
-2) gradle 버전 2014/05/15일 현재 1.12버전 사용중
-2.1) 설치위치 /Users/seokangchun/gradle-1.12
+2) gradle 버전 2014/11/28일 현재 버전 사용중
+
+```cmd
+/Users/seokangchun/gradle-2.2.1
+```
 
 3) jdk1.8 설치
-3.1) 설치위치 /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+
+jdk1.8
+```cmd
+/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+```
+
+jdk1.7
+```cmd
+/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home
+```
+
 
 4) webstorm 에서 yeoman, bower, grunt 설치
 $ sudo npm install -g yo
