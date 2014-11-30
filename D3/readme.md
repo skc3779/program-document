@@ -55,7 +55,8 @@ require(["d3"], function(d3) {
 ###  Reference
 
 * D3 github source
-https://github.com/mbostock/d3
+
+> https://github.com/mbostock/d3
 
 * D3 API Reference
 http://github.com/mbostock/d3/wiki/API-Reference
