@@ -1,4 +1,4 @@
-## Sencha Cmd 사용법
+## Sencha Ext 사용법
 
 ### 1. Sencha SDK로 프로젝트 생성하기
 
@@ -42,8 +42,7 @@ _참고링크_ : [Theming Ext JS](http://docs.sencha.com/extjs/5.0/core_concepts
 sencha --sdk-path <EXTJS5_APTH> generate workspace -ext my-workspace
 ```
 
-위 커맨드를 실행하면 my-workspace라는 작업공간이 생성되는데 생성이 완료되면 ext 디렉토리에 ExtJS 4.2.1 or 5가 위치하게 되고
-ext, packages 디렉토리가 생성됨
+위 커맨드를 실행하면 my-workspace라는 작업공간이 생성되는데 생성이 완료되면 ext 디렉토리에 ExtJS 4.2.1 or 5가 위치하게 되고 ext, packages 디렉토리가 생성됨
 
 ```cmd
 $ sencha --sdk-path ~/sencha/Sdk/ext-5.0.1 generate workspace -ext my-workspace
