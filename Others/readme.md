@@ -29,8 +29,7 @@ http://xpush.github.io/ko/service/
 
 * 참고자료
 
-    > 오픈소스(OSS)를 활용한 분산아키텍처 구현기술
-    > http://www.slideshare.net/deview/232-deview2013-oss?ref=http://xpush.github.io/ko/blog/
+    > 오픈소스(OSS)를 활용한 분산아키텍처 구현기술<br/>http://www.slideshare.net/deview/232-deview2013-oss?ref=http://xpush.github.io/ko/blog/
 
 ## jekyll
 
