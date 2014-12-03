@@ -38,7 +38,7 @@ http://jekyllrb.com/
 
 **일반 텍스트를 정적 웹사이트와 블로그로 변환 시키주는 툴**
 
-* 정보
+* 참고자료
 
 > jekyll를 이용해 생성한 파워플한 블로그와 사이트들, 이페이지에서 다른사람들의 소스를 통해 공부하세요.
 > https://github.com/jekyll/jekyll/wiki/Sites
