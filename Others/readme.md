@@ -11,12 +11,12 @@ http://xpush.github.io/ko/service/
 * 특징
 
 1. Real-time Web Communication Platform
-2. Works Everywhere
-3. Scalable Web Architecture
+2. Wroks Everywhere
+3. Scalable Web architecture
 
 * 제공되는 소스
 
-> node-xpush : XPUSH 서버 플랫폼 소스.
+> node-xpush : XPUSH 서버 플랫폼 소스
 > node-xpush-client : XPUSH 서버 Node.js Client 모듈 소스
 > lib-xpush-web : XPUSH API Javascript 라이브러리 소스 
 > lib-xpush-java : XPUSH API JAVA 라이브러리 소스 
