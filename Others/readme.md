@@ -29,7 +29,7 @@ http://xpush.github.io/ko/service/
 
 * 참고자료
 
-> 오픈소스(OSS)를 활용한 분산아키텍처 구현기술<br/>http://www.slideshare.net/deview/232-deview2013-oss?ref=http://xpush.github.io/ko/blog/
+    > 오픈소스(OSS)를 활용한 분산아키텍처 구현기술<br/>http://www.slideshare.net/deview/232-deview2013-oss?ref=http://xpush.github.io/ko/blog/
 
 ## jekyll
 
@@ -39,4 +39,4 @@ http://jekyllrb.com/
 
 * 참고자료
 
-> jekyll를 이용해 생성한 파워플한 블로그와 사이트들, 이페이지에서 다른사람들의 소스를 통해 공부하세요.<br/>https://github.com/jekyll/jekyll/wiki/Sites
+    > jekyll를 이용해 생성한 파워플한 블로그와 사이트들, 이페이지에서 다른사람들의 소스를 통해 공부하세요.<br/>https://github.com/jekyll/jekyll/wiki/Sites
