@@ -16,8 +16,8 @@ http://xpush.github.io/ko/service/
 
 * 제공되는 소스
 
-> node-xpush : XPUSH 서버 플랫폼 소스 
-> node-xpush-client : XPUSH 서버 Node.js Client 모듈 소스 
+> node-xpush : XPUSH 서버 플랫폼 소스.
+> node-xpush-client : XPUSH 서버 Node.js Client 모듈 소스
 > lib-xpush-web : XPUSH API Javascript 라이브러리 소스 
 > lib-xpush-java : XPUSH API JAVA 라이브러리 소스 
 > dockerfile : XPUSH 서버 플랫폼 Docker 설치 이미지 파일 (Docker Hub에 등록) 
