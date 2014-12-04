@@ -65,13 +65,30 @@ node 버전확인
 node -v
 ```
 
-
 node 업그레이드
 
 ```console
 sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
+```
+## [ Mac Ports 설치 ]
+
+https://www.macports.org/install.php
+
+MacPorts is an easy to use system for compiling, installing, and managing open source software.
+
+1. Install [Xcode and the Xcode Command Line Tools](http://guide.macports.org/#installing.xcode)
+2. Agree to Xcode license in Terminal: sudo xcodebuild -license
+3. Install MacPorts for your version of OS X:
+    [OS X 10.10 Yosemite](https://distfiles.macports.org/MacPorts/MacPorts-2.3.3-10.10-Yosemite.pkg)
+
+### Selfupdate
+
+lastly, you need to synchronize your installation with the MacPorts rsync server:
+
+```cmd
+$> sudo port -v selfupdate
 ```
 
 ## [ brew를 설치 ]
@@ -417,4 +434,135 @@ $> sudo mysql.server start
 
 > http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/
 
+## ImageMagick
+
+http://xpush.github.io/ko/doc/installation/index.html
+
+ImageMagick® is a software suite to create, edit, compose, or convert bitmap images
+It can read and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. se ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
+
+1) Mac OS Install
+http://www.imagemagick.org/script/binary-releases.php#macosx
+
+```cmd
+$> sudo port install ImageMagick
+```
+
+2) Image Magic  사용법
+
+파일포맷변경
+
+```cmd
+convert image_org.gif  image_out.jpg
+[설명] image_org.gif  이미지를 image_out.jpg로 바꾼다.
+
+convert image_org.png  image_out.jpg
+[설명] image_org.png  이미지를 image_out.jpg로 바꾼다.
+```
+
+추가참고자료
+http://www.albumbang.com/board/board_view.jsp?board_name=free&no=57
+
+
+## XPush 설치
+
+http://xpush.github.io/ko/doc/installation/index.html
+
+XPush를 위해서 사전에 설치되어야 하는 프로그램
+
+1. nodeJs
+1. Redis
+2. MongoDb
+3. ImageMagick
+
+
+### Install
+
+npm install 설치
+
+```cmd
+$> npm install -g xpush
+```
+Install Locations `/usr/local/lib/node_modules/xpush`
+
+or
+
+github 에서 직접 다운로드 설치 **`(이방식으로 설치)`**
+
+```cmd
+git clone https://github.com/xpush/node-xpush.git
+cd node-xpush
+npm install
+```
+
+Install Locations `~/githubProjects/node-xpush`
+
+### Run xpush
+
+세션 서버를 실행하세요. 자세한 옵션은 [여기](http://xpush.github.io/doc/configuration/#run_config)를 확인하세요.
+
+```cmd
+cd $HOME/xpush/node_modules/xpush
+bin/xpush --port 8000 --config ./config.sample.json --session
+```
+
+채널 서버를 실행하세요. 자세한 옵션은 [여기](http://xpush.github.io/doc/configuration/#run_config)를 확인하세요.
+```cmd
+cd $HOME/xpush/node_modules/xpush
+bin/xpush --port 9000 --config ./config.sample.json
+
+상세실행 방법
+$> bin/xpush --port 8000 --config ./config.sample.json --channel --host sample.stalk.io
+```
+
+config.sample.json 파일 설정
+
+```json
+{
+  "zookeeper": {"address":"127.0.0.1:2181"},
+  "redis": {"address":"127.0.0.1:6379"},
+  "mongodb": {"address":"127.0.0.1:27017"},
+  "oauth": {},
+  "apps" : []
+}
+```
+
+## ZooKeeper
+
+분산환경에서 서버들간에 상호 조정이 필요한 다양한 서비스를 제공하는 시스템입니다.
+
+첫째, 하나의 서버에만 서비스가 집중되지 않도록, 서비스를 알맞게 분산하여 동시에 처리하게 해줍니다. 
+둘째, 하나의 서버에서 처리한 결과를 다른 서버들과도 동기화하여 데이터의 안정성을 보장해 줍니다. 
+셋째, 운영(active)서버가 문제가 발생해서 서비스를 제공할 수 없을 경우, 다른 대기 중인 서버를 운영서버로 바꿔서 서비스가 중지 없지 제공되게 해줍니다. 
+넷째, 분산 환경을 구성하는 서버들의 환경설정을 통합적으로 관리해줍니다.
+
+    * Zookeeper Download : http://www.apache.org/dyn/closer.cgi/zookeeper/
+    * Zookeeper 문서: http://zookeeper.apache.org/doc/current/
+    * Zookeeper 설치 및 가이드 : http://zookeeper.apache.org/doc/current/zookeeperStarted.html
+
+* 서버 구동 :
+
+```cmd
+$> cd /usr/local/zookeeper/zookeeper-3.4.6
+$> bin/zkServer.sh start
+```
+
+*  Zookeeper 접속하기 :
+
+```cmd
+$> cd /usr/local/zookeeper/zookeeper-3.4.6
+$> bin/zkCli.sh -server 127.0.0.1:2181
+```
+
+## Mocha
+
+```cmd
+$> npm install -g mocha
+
+```
+
+nodejs test 
+
+
+http://blog.outsider.ne.kr/770
 
