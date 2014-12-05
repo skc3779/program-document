@@ -12,9 +12,10 @@ export PATH="/Users/seokangchun/Libraries/vert.x-2.1.5/bin:$PATH"
 ## [ yeoman을 이용해 angular front end 개발을 위한 설정방법 ]
 
 1) nodejs 설치
-1.1) /usr/local/bin/node 에 노드 설치
-1.2) /usr/local/bin/npm 에  npm 설치
-1.3) .bash_profile 의 $PATH에 경로 등록
+
+    1.1) /usr/local/bin/node 에 노드 설치
+    1.2) /usr/local/bin/npm 에  npm 설치
+    1.3) .bash_profile 의 $PATH에 경로 등록
 
 2) gradle 버전 2014/11/28일 현재 버전 사용중
 
