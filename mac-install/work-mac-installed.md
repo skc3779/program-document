@@ -200,6 +200,7 @@ brew install redis
 서비실행방법
 
 ```console
+$> redis-server /usr/local/etc/redis.conf   --> 환경파일 지정 실행 or
 $> redis-server
 
 [3851] 19 Nov 16:07:39.032 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
@@ -545,8 +546,17 @@ config.sample.json 파일 설정
     * Zookeeper Download : http://www.apache.org/dyn/closer.cgi/zookeeper/
     * Zookeeper 문서: http://zookeeper.apache.org/doc/current/
     * Zookeeper 설치 및 가이드 : http://zookeeper.apache.org/doc/current/zookeeperStarted.html
+* 다운로드 :
 
-* 서버 구동 :
+```cmd
+# wget http://apache.mirror.cdnetworks.com/zookeeper/zookeeper-3.4.5/zookeeper-3.4.5.tar.gz
+# tar zxvf zookeeper-3.4.6.tar.gz
+# cp -Rf zookeeper-3.4.6 /usr/local/zookeeper
+# cd /usr/local/zookeeper
+
+```
+
+* 서버 구동 : start 시작, stop 정지
 
 ```cmd
 $> cd /usr/local/zookeeper/zookeeper-3.4.6
@@ -570,3 +580,13 @@ $> npm install -g mocha
 ### nodejs test 참고링크
 
 mocha : node.js 테스트 프레임워크 [link](http://blog.outsider.ne.kr/770)
+
+## tree install
+
+package 관리자를 사용해서 설치한다. Homebrew, MackPorts, Fink 등을 사용할 수 있다.
+
+```cmd
+brew install tree
+sudo port install tree
+fink install tree
+```
