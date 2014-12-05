@@ -26,3 +26,7 @@ import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330
 * List Package : 설치된 패키지 목록을 보여준다.
 * Remove Pacakage :  패키지를 삭제한다.
 
+
+### 참고블로그
+
+http://opentutorials.org/module/406/3629
