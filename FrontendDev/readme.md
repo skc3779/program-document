@@ -300,7 +300,7 @@ Prefernences > File Watchers
 
 Program setting값에 node_modules의 less 값을 설정한다.
 
-![Add Watcher](images/webstorm02.jpg)
+![Add Watcher](images/webstorm02.png)
 
 ### Webstorm Emmet plugin
 
