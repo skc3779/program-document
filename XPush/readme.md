@@ -55,3 +55,50 @@ http://borisunde.blogspot.kr/2012/04/blog-post.html
    }(document, 'script', 'facebook-jssdk'));
 </script>
 ```
+
+## Xpush 실행하기
+
+1. xpush는 zookeeper, redis, mongodb를 활용하고 있습니다. 관련 애플리케이션을 실행시켜 두어야 합니다.
+2. xpush는 서버는 세션서버와 채널서버로 구성되어 있는데 서비스를 위해서는 모두 실행시켜 두어야 합니다.
+
+* zookeepr 실행
+
+```cmd
+$> cd /usr/local/zookeeper/zookeeper-3.4.6
+$> bin/zkServer.sh start
+
+```
+
+* redis 실행
+
+```cmd
+$> redis-server
+```
+
+* mongodb 실행
+
+```cmd
+$> mongod --dbpath /usr/local/var/mongodb
+```
+
+* 세선서버 실행
+
+```cmd
+$> cd $소스폴더$/xpush
+$> bin/xpush --port 8000 --config ./config.json --session
+```
+
+* 채널서버 실행
+
+```cmd
+$> cd $소스폴더$/xpush
+$> bin/xpush --port 9000 --config ./config.json 
+```
+
+## MessagerX 설치하기
+
+MessagerX를 설치하기 위해서는 [ionic](http://ionicframework.com/), [cordova](http://cordova.apache.org/), [gulp](http://gulpjs.com/)가 먼저 설치되어 있어야 합니다.
+
+```cmd
+$> sudo npm install -g cordova ionic
+```
