@@ -100,5 +100,5 @@ $> bin/xpush --port 9000 --config ./config.json
 MessagerX를 설치하기 위해서는 [ionic](http://ionicframework.com/), [cordova](http://cordova.apache.org/), [gulp](http://gulpjs.com/)가 먼저 설치되어 있어야 합니다.
 
 ```cmd
-$> sudo npm install -g cordova ionic
+$> sudo npm install -g cordova ionic gulp
 ```
