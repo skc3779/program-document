@@ -16,9 +16,14 @@ Web SQL Database는 Safari, Chrome and Opera에서 사용 할 수 있습니다.
 
 ### Web SQL Tutorial
 
+간단 Tutorial
 http://www.tutorialspoint.com/html5/html5_web_sql.htm
+
+SQL 사용방법
 http://www.tutorialspoint.com/sql/index.htm
 
+샘플제공 Tutorial
+https://developer.tizen.org/dev-guide/2.2.1/org.tizen.web.appprogramming/html/tutorials/w3c_tutorial/storage_tutorial/web_sql_tutorial.htm
 
 ### DataBase 오픈
 
