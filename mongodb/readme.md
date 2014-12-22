@@ -89,6 +89,41 @@ connecting to: test
 |db.things.findOne()|첫번째 Document만 출력한다.|
 |it | 더 있는 경우 ‘it'|
 
+#### update()
+Modifies an existing document or documents in a collection
+
+```javascript
+db.collection.update(query, update, options)
+
+db.collection.update(
+   <query>,
+   <update>,
+   {
+     upsert: <boolean>,
+     multi: <boolean>,
+     writeConcern: <document>
+   }
+)
+
+database scheme
+{ "_id" : ObjectId("548a9e9e66d8aa73287a9ed9"), "A" : "messengerx", "U" : "user02", "PW" : "dkMfrIoYckGvjz83FW3rlHMvUvtF6wfsT0YgUb2C8YM=", "DT" : { "I" : "http://sample.stalk.io:8100/img/default_image.jpg" }, "DS" : { "ionic" : { "N" : null, "TK" : "FW3dGvsJVl" } }, "CD" : ISODate("2014-12-12T07:51:58.602Z"), "GR" : [ "user01", "xodhks_0113", "user03" ], "__v" : 0 }
+
+example update
+db.users.update({"A" : "messengerx"}, { $set : {"DT" : { "I":"http://sample.stalk.io:8100/img/default_image.jpg" }}}, {multi:true} );
+```
+
+#### remove()
+Removes documents from a collection. [Link](http://docs.mongodb.org/manual/reference/method/db.collection.remove/#db.collection.remove)
+```javascript
+db.collection.remove(
+   <query>,
+   <justOne>
+)
+
+example remove
+db.users.remove({"_id" : ObjectId("548a9e9666d8aa73287a9ed8")});
+```
+
 ## 참고문서
 
 nodejs mongodb api
