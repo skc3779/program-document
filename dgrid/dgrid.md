@@ -1,6 +1,8 @@
-# dgrid 
+# dgrid
 
-dgrid is a next-generation grid component
+dgrid는 오픈소스 웹 그리드 중에서 가장 성능이 좋아 보인다. 그럼 dgrid 데모를 직접 자신의 pc설치해 보자.
+
+site
 http://dgrid.io/
 
 example
@@ -91,5 +93,11 @@ drwxr-xr-x   24 seokangchun  staff   816  1  9 14:01 xstyle
 python 2+ 에서의 simple http server 
 
 ```cmd
-$dgrid-demo>python -m SimpleHTTPServer 8888
+$dgrid-demo>python -m SimpleHTTPServer 9000
 ```
+
+#### 6. 브라우저 실행모습
+
+http://localhost:9000/dgrid/test/index.html
+
+![실행샘플](images/dgrid.jpg)
