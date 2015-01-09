@@ -89,6 +89,27 @@ connecting to: test
 |db.things.findOne()|첫번째 Document만 출력한다.|
 |it | 더 있는 경우 ‘it'|
 
+#### insert()
+Insert a document into a collection named inventory
+```javascript
+db.inventory.insert(
+   {
+     item: "ABC1",
+     details: {
+        model: "14Q3",
+        manufacturer: "XYZ Company"
+     },
+     stock: [ { size: "S", qty: 25 }, { size: "M", qty: 50 } ],
+     category: "clothing"
+   }
+)
+```
+
+Insert 성공 시 'WriteResult' 리턴 객체를 반환한다.
+```javascript
+WriteResult({ "nInserted" : 1 })
+```
+
 #### update()
 Modifies an existing document or documents in a collection
 

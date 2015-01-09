@@ -91,5 +91,34 @@ mysql> show databases;
 | test               |
 +--------------------+
 4 rows in set (0.00 sec)
+
+테이블의 컬럼 리스트
+mysql> show columns in [tablename];
+
+테이블 리스트
+mysql> show tables;
 ```
+
+## 데이터베이스 및 계정 생성
+
+```script
+-- 데이터베이스 생성
+create database db;
+
+-- 데이터베이스 계정 생성
+create user 'dbuser'@'localhost' identified by 'dbuser';
+
+-- 특정 디비에 대한 모든권한을 가진계정
+grant all privileges on db.* to 'dbuser'@'localhost';
+
+-- 설정 적용
+flush privileges;
+
+-- 사용자 접속권한 정보 확인
+show grants for 'dbuser@'localhost';
+
+-- 데이터베이스 변경
+use bookstore;
+```
+
 
