@@ -4,7 +4,7 @@
 
 ## 패키지 설치
 
-메뉴 View > Show Console 을 선택해서 Console 창을 열고 아래의 명령어를 입력하고 엔터
+메뉴 View > Show Console 을 선택해서 Console 창을 열고 아래의 명령어를 입력하고 엔터 입력하세요.
 
 Sublime Text 2
 
@@ -30,3 +30,77 @@ import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330
 ### 참고블로그
 
 http://opentutorials.org/module/406/3629
+
+
+## 명령어
+
+### Column Selection (컬럼 선택)
+
+컬럼 선택이란 선택의 범위를 세로로확장할 수 있는 서택을 의미하빈다. 우선 마우스와 단축키를 통해 같은 단어르르 선택하는 방법을 알아봅니다. 시작하는 곳을 클릭한다음에 Opt(윈 Shift)를 누르고 단어의 시작에서 마우스 오른쪽 버튼을 누르고 원하는 줄까지 드래그하면 됩니다.
+
+`Opt + Mouse(Left button)`
+
+이번에는 중간에 줄 선택을 제외하려면 Cmd(윈 Ctrl+Shift)를 누르고 마우스 오른쪽 버튼을 클릭해 단어의 앞을 클릭합니다.
+
+`Cmd + Mouse(Left button)`
+
+### Expand Selection(선택의 확장)
+
+
+편집창내 같은 단어지만 마우스 더블클릭 또는 Shift+좌(우) 화살표방향 클릭하게 되면 마우스 대쉬로 분리된 단어가 선택된다 이때 Opt+D(윈 Ctrl+D)를 눌러서 선택된 단어를 확장한다.
+
+### 로그 보기/감추기 기능
+
+Sublime Console에 로그를 보이게 하거나 로그를 감추는 명령어
+`view > show console`
+
+```cmd
+보이기
+sublime.log_commands(True)
+감추기
+sublime.log_commands(False)
+```
+
+### 들여쓰기(Indent)
+
+에디터 환경에서 들여쓰기 할곳에 블록을 설정하거나 문자 시작에 마우스 포커서를 두고 `Command+]` 하면 들여쓰기 `Command+[`하면 내여쓰기를 할 수 있습니다.
+
+
+### 줄의 복사와 삭제 (Duplicate Line and Delete Line)
+
+`Cmd+Shift+D(윈 Ctrl+Shift+D)` 줄의 복사, `Cmd+Shift+k(윈 Ctrl+Shift+K)` 줄의 삭제
+
+### 줄의 병합하기 (Join Line)
+
+`Cmd+j` 줄의 병합기능
+
+### 주석기능
+
+주석은 `Cmd+/`, 주석블록은 `Cmd+Opt+/`
+
+### 빈줄 넣기
+
+빈줄넣기 `Cmd+Return` 이전빈줄넣기 `Cmd+Shift+Return`
+
+### 코드접기(Code Folding)
+
+에디터 창의 태그코드의 블럭을 접는 기능을 제공합니다. 전체접기는 `Cmd+Opt+[` 사용하고 반대로 접기풀기는 `Cmd + Opt + ]`을 사용 하면됩니다.
+
+그외 태그 레벨단위로 접기기능을 제공하는데 `Cmd+k, Cmd+숫자` 이때 숫자는 태그의 깊이를 의미합니다. 특정블록의 태그를 접는게 아니라 해당 깊이의 모든 태그를 접는 기능입니다. 반대로 해제시는 `Cmd+k, Cmd+j` 입니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
