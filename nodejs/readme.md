@@ -1,7 +1,12 @@
 # NodeJs 사용법
 
+### 설치방법
+
+블로그 참고 : http://bcho.tistory.com/884
 
 ### npm install
+
+`npm install [npm module]` 구문으로 필요한 모듈을 설치 할 수 있습니다.
 
 ### npm delete
 
