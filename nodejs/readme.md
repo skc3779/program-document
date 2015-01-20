@@ -4,9 +4,31 @@
 
 블로그 참고 : http://bcho.tistory.com/884
 
+Mac 에서는 http://nodejs.org/download/ 에서 [Macintoch installer](http://nodejs.org/download/)를 *.pkg 다운로드 받아 설치한다.
+
+
+```cmd
+* 설치위치
+
+node install
+/usr/local/bin/node
+
+npm install
+/usr/local/bin/npm
+
+* 버전확인
+
+$> node -v
+v0.10.35
+$> npm -v
+1.4.28
+```
+
+
 ### npm install
 
 `npm install [npm module]` 구문으로 필요한 모듈을 설치 할 수 있습니다.
+
 
 ### npm delete
 
