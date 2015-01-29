@@ -1,6 +1,6 @@
 # Intellij 1.4 기능 정의
 
-## 1. Intellij IDEA에서 파일 인코딩 설정 및 코케일 언어 출력
+## 1. Intellij IDEA에서 파일 인코딩 설정 및 로케일 언어 출력
 
 Preferences > File Encodeings 에서  Transparent native-to-ascii convertion 을 체크해 주면 .properties 한글을 입력하게 되면 자동으로  UTF-8  인코딩값으로 변환하여 등록하게 되며,  Editor 에서는 한글로 표시됩니다.
 
