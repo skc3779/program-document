@@ -89,18 +89,68 @@ sublime.log_commands(False)
 그외 태그 레벨단위로 접기기능을 제공하는데 `Cmd+k, Cmd+숫자` 이때 숫자는 태그의 깊이를 의미합니다. 특정블록의 태그를 접는게 아니라 해당 깊이의 모든 태그를 접는 기능입니다. 반대로 해제시는 `Cmd+k, Cmd+j` 입니다.
 
 
+## 플러그인 소개
+
+### Emmet
+
+Emmet은 간단한 글자 입력으로 복잡한 코드를 완성 할 수 있는 플러그인 입니다.
+이전 이름이 Zen Coding 이었던 것이 Emmet으로 리네임 되면서 기능도 더 좋아 졌습니다.
+
+Shift + Cmd (Window : Shift + Ctrl) 단축명령으로 Command Palette 을 오픈한 다음에 `Install Package`를 입력해서 플러그인 설치가능 리스트로 이동합니다. 이곳입력 명령창에 Emmet 이라고 입력하고 설치하면 Command Palette과  편집창에서 Emmet관련 명령어를 사용 할수 있습니다.
+
+단축명령어 : http://docs.emmet.io/cheat-sheet/
+
+사용법 cheet sheet를 입력한 다음에 탭키를 눌러줍니다.
+
+cheet-sheet 예시
+```html 
+html:5 [탭]
+```
+
+입력후 탭을 클릭하면 아래와 같이 HTML5 관련 기본코드가 생성됩니다.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+```
 
 
+### FTP연결하기
+
+서브라임 텍스트는 호스팅 서버와 연결해 작업 할 수 있는 환경이 기본편집기에는 구비되어 있지 않습니다. `Install Package`를 통해 FTPSync를 설치합니다.
+
+맥의 경우 메뉴중 Sublime Text > Preferences > Package Settings > FTPSync >  Settings User 를 선택하여 사용자 설정 파일을 오픈합니다.
+
+Settings Defults에 있는 설정내용을 복사해서 사용자 설정 파일에 붙여 넣은 다음에 본인의 FTP서버 환경을 설정합니다.
+
+```json
+{
+	"primary": {
+    	"host":"remote server domain or ip",
+		"username":"testuser",
+        "password":"testpassword",
+		"path":"/"
+    }
+}
+
+```
+
+### SideBarEnhancements
+
+View > SideBar 클릭해면 외쪽에 사이드바가 생성되는데 이곳의 프로젝트 트리에서 폴더나 파일을 선택후 마우스 오측버튼을 클릭하면 메뉴가 나오는데 기능이 별로 없습니다. 그래서 개발된 것이 SideBarEnhancements 입니다.
 
 
+### Color Picker (칼라 픽커)
 
+### Minifier ( 코드축약 )
 
-
-
-
-
-
-
-
-
+편집기 내에서 작성한 코드의 파일양을 줄이기 위해서 만들어진 패키지 입니다.
+편집기에서 해당 코드에 블럭을 설정하고 우측마우스를 클릭하면 Minify 라는 메뉴명령어가 보입니다. 이를 클릭해주시면 해당 코드가 한줄로 작성됩니다. 이와 반대로 여러줄로 변경하려면 동일하게 블럭을 설정하고 우측마우스를 클릭 후 `HTML/CSS/JS Prettify`에서 `Prettify Code` 메뉴를 클릭하시면 여러라인의 코드로 복원 됩니다.
 
