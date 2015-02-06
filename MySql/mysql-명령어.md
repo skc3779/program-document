@@ -52,7 +52,7 @@ Query OK
 
 ```
 
-또다른 방법
+또 다른 방법
 
 ```cmd
 $> ./mysql -u root -p [database name]
