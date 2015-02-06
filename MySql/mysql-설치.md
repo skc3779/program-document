@@ -4,7 +4,9 @@ Yosemite 버전 (10.10) 에서는  최신버전인 `Mac OS X ver.10.9(x86, 65-bi
 
 그리고 우선 [Mysql](http://dev.mysql.com/downloads/mysql/) 다운로드 해야 합니다.
 
-1) 설치 시 사용자화 인스톨를 통해서 `Startup Item`를 Skip 시킨 상태에서 설치한다. (기본설치는 설치오류 발생)
+1) 설치 시 `사용자화` 인스톨를 통해서 `Startup Item`를 Skip 시킨 상태에서 설치한다. *유의) 기본설치를 하는 경우에는 설치시 설치오류 발생하게 됩니다.*
+
+![Startup Item 제외](images/mysql_customer.png)
 
 2) .bash_profile 에 아래의 구문을 추가등록 합니다.
 
@@ -15,7 +17,7 @@ export PATH="/usr/local/mysql/bin:$PATH"
 3) Mysql를 수동으로 실행합니다.
 
 > System Preferences ( 시스템 환경설정 ) 에서 Mysql를 실행 하고 아래의 Start MySql Server를 클릭
-
+>
 > Terminal 창에서 아래와 같이 실행
 
 ```cmd
@@ -31,3 +33,33 @@ $> sudo mysql.server start
 * 참고
 
 > http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/
+
+### MySql 재시작
+```cmd
+$> sudo /usr/local/mysql/support-files/mysql.server restart
+```
+
+## MySQL 기본 캐릭터셋 설정
+
+일단 /etc/my.cnf 파일이 있는지 확인하고 없으면 /usr/local/mysql/support-files 폴더에서 my-default.cnf 파일을 복사해온다.
+
+```cmd
+$> cp /usr/local/mysql/support-files/my-default.cnf /etc/my.cnf
+```
+
+/etc/my.cnf에 아래의 내용을 추가한다.
+
+```txt
+[mysqld]
+character-set-server=utf8
+collation-server=utf8_general_ci
+
+init_connect=SET collation_connection=utf8_general_ci
+init_connect=SET NAMES utf8
+
+[client]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+```
