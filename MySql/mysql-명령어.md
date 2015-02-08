@@ -65,5 +65,13 @@ Query Ok
 
 ```
 
+## MySql 변수
+
+MySql 서버는 기동하면서 설정 파일의 내용을 읽어 메모리나 작동방식을 초기화 하고 접속된 사용자를 제어하기 위해 설정값을 별도로 저장해 두는데  이렇게 저장된 값을 변수(Valiable)라고 한다.
+
+```cmd
+
+mysql> show global variables;
+```
 
 
