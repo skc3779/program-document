@@ -15,11 +15,17 @@ $> mysql -u root -pqwer12#$ [[DBName]] < [[DumpFileName]]
 ## 데이터베이스 생성 및 권한 주기
 
 ```cmd
-CREATE DATABASE wemebuil;
-GRANT ALL ON wemebuil.* TO root@'%' IDENTIFIED BY 'xxxxxx';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'xxxxxx' WITH GRANT OPTION;
+CREATE DATABASE [database];
+GRANT ALL PRIVILEGES ON [database].* TO root@'%';
+GRANT ALL PRIVILEGES ON [database].* TO 'root'@'%' IDENTIFIED BY 'xxxxxx' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
+
+* `[database].*` 특정 데이터베이스에 권한을 지정합니다. 만일 `*.*` 이렇게 하면 모든 데이터베이스에 권한을 지정하게 됩니다.
+
+* `GRANT` 문장이 실행될 때 지정된 사용자가 존재하지 않으면 먼저 해당 사용자를 생성하고 권한을 부여합니다. 이경우에는 `IDENTIFIED BY` 절을 이용해 사용자의 비밀번호까지 설정할 수 있습니다. `WITH GRANT OPTION` 권한은 다른 권한과 달리 GRANT 문장의 마지막에 부여합니다.
+
+* `FLUSH PRIVILEGES`으로 권한을 적용합니다.
 
 ## MySql 접속하기
 
