@@ -63,3 +63,22 @@ default-character-set=utf8
 [mysql]
 default-character-set=utf8
 ```
+
+## MySql 삭제
+
+MySql을 Mac에 설치하게 되면 밑과 같이 시스템환경에 설정화면이 등록됩니다. 서비스 시작 및 자동여부를 결정할 수 있는 기능 설정화면을 제공하는데 MySql서버만 지워주는게 아니라 이러한 설정화면도 지워줘야 하는데 MySql 서버와 설정화면을 제거하기 위해서는 아래의 명령어을 콘솔창으로 실행해(제거) 주면 됩니다.
+
+![설정화면](images/mysql_remove.png)
+
+```cmd
+
+sudo rm /usr/local/mysql
+sudo rm -rf /usr/local/mysql*
+sudo rm -rf /Library/StartupItems/MySQLCOM
+sudo rm -rf /Library/PreferencePanes/My*
+rm -rf ~/Library/PreferencePanes/My*
+sudo rm -rf /Library/Receipts/mysql*
+sudo rm -rf /Library/Receipts/MySQL*
+sudo rm -rf /var/db/receipts/com.mysql.*
+ 
+```

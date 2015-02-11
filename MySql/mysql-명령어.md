@@ -108,3 +108,5 @@ MySQL 5.1 또는 이후 버전에 설치가능합니다.
 ```cmd
 $> brew install https://raw.github.com/mroonga/homebrew/master/mroonga.rb --use-homebrew-mysql
 ```
+
+
