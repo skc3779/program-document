@@ -103,7 +103,15 @@ To https://github.com/skc3779/multi-web-demo.git
 
 5) 마지막으로 github에서 확인해 본다.
 
-## Intellij 14에서 Git branch 변경하기 
+## remove directory form git and local git 폴더, 파일삭제하기
+
+```cmd
+git rm -r one-of-the-directories
+git commit -m "Remove duplicated directory"
+git push origin master
+```
+
+## Intellij 14에서 Git branch 변경하기
 
 Project Menu (우측마우스) -> Git -> Repository -> Branch... 팝업메뉴 중에서 변경하고자 하는 브랜치를 선택
 
