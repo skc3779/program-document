@@ -8,3 +8,10 @@ Preferences > File Encodeings 에서  Transparent native-to-ascii convertion 을
 
 ![File Encodings](images/new_01_01.jpg)
 
+## 2. Tool Buttons 
+
+Menu > View > Tool Buttons
+
+Intellij의 Gradle, Maven, Commander, IDETalk, Bean Validation 등의 Tool Window을 화면의 좌측에 Bar형식으로 위치시켜주는 기능
+
+![Tool Buttons](images/new_02.jpg)
