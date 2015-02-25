@@ -4,6 +4,25 @@
 
 관련해서 *Matt Greer의 블로그* 글을 참조해 보면 좋습니다. [JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
 
+#### Promise란 무엇일까요 (한빛미디어)?
+
+Promise는 전통적인 콜백 패턴이 가진 단점을 일부 보완하며 비동기 처리 시점을 명확하게 표현해 줍니다. 다시말해 비동기 처리 로직을 추상화한 객체와 그것을 조작하는 방식을 말합닏. 이 개념은 E 언어에서 처음 고안됐으며, 병렬과 병행 프로그램밍을 위한 일종의 디자인 패턴이라 할 수 있습니다. 보통은 자바스크립트에서는 비동기 처리를 위해서 콜백을 사용합니다. "간단한 사용사례" 참고, 그러나 Promise를 지원하는 함수는 비동기 처리 로직을 추상화한 promise 객체를 반환합니다. 그리고 사례에서 볼 수 있듣이 객체를 변수에 대입하고 성공시 동작 할 함수와 실패 시 동작할 함수를 등록해 사용합니다.
+
+```javascript
+function asyncFunction() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve('Async Hello world');
+        }, 16);
+    });
+}
+
+asyncFunction().then(function (value) {
+    console.log(value); // => 'Async Hello world'
+}).catch(function (error) {
+    console.log(error);
+});
+```
 #### 그럼 Promise가 왜 필요할 까요?
 
 ---
@@ -46,6 +65,7 @@ function doSomething() {
   };
 }
 ```
+
 
 
 ## Promise 참고링크
