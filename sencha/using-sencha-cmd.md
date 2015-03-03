@@ -5,6 +5,13 @@
 * Touch http://docs.sencha.com/cmd/5.x/touch/cmd_app.html
 * Extjs http://docs.sencha.com/cmd/5.x/extjs/cmd_app.html
 
+### Sencha download
+
+* Sencha cmd http://www.sencha.com/products/sencha-cmd/download/sencha-cmd-5.1.2/mac
+* Sencha ExtJs GPL License : http://www.sencha.com/products/extjs/details
+* Sencha ExtJs Commercial Trial : http://www.sencha.com/products/extjs/
+  DOWNLOAD A FREE 30-DAY TRIAL OF EXT JS 5
+
 ### Sencha Cmd
 
 Cmd가 제공하는 기능
