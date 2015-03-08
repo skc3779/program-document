@@ -1,4 +1,4 @@
-# Sencha Extjs 구조
+## Sencha Extjs Application 구조
 
 
 ```cmd
