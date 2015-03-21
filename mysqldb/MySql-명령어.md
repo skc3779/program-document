@@ -9,7 +9,7 @@ $> mysqldump -u root -p -h 192.168.13.XXX [[DBName]] > [[DumpFileName]]
 
 데이터베이스 백업파일을 Import하기 위해서는 아래와 같은 명령어를 사용하시면 됩니다.
 ```cmd
-$> mysql -u root -pqwer12#$ [[DBName]] < [[DumpFileName]]
+$> mysql -u root -p [[DBName]] < [[DumpFileName]]
 ```
 
 ## 데이터베이스 생성 및 권한 주기
