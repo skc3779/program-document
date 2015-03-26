@@ -58,4 +58,36 @@ Produces app/views/myroute.html:
 ```
 
 
+### service 생성
+
+```cmd
+$> yo angular:service myService
+
+Produces app/scripts/services/myService.js:
+
+angular.module('myMod').service('myService', function () {
+  // ...
+});
+```
+
+### Decorator 생성
+
+Generates an AngularJS service decorator.
+```cmd
+yo angular:decorator serviceName
+
+Produces app/scripts/decorators/serviceNameDecorator.js:
+
+angular.module('myMod').config(function ($provide) {
+    $provide.decorator('serviceName', function ($delegate) {
+      // ...
+      return $delegate;
+    });
+  });
+
+```
+
+
+
+
 
