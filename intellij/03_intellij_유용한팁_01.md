@@ -31,7 +31,7 @@ Mac 기준으로 설명, Intellij IDEA > Preference > Editor > Live Templates
 2. `+` 클릭해서 Abbreviation 에는 slog , Description에는  Prints to string to Slf4j를 입력하고  Template text:에 아래의 내용을 입력한다.
 
 ```java
-private Logger log = LoggerFactory.getLogger($CLASS_NAME$.class);
+private static final Logger log = LoggerFactory.getLogger($CLASS_NAME$.class);
 ```
 
 이때 `$CLASS_NAME$`는 대체해주고자 하는 문자로  Edit variables 버튼을 눌러 Expression 메소드와 매칭을 해준다.
