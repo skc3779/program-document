@@ -7,6 +7,7 @@ http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer)
 
 [Redmine 인스톨 방법 2 링크](https://github.com/yakmoz/ref/blob/master/redmine/redmine_os_x.md)
 
+[Redmine 업그레이드 방법 1 링크](http://www.redmine.org/projects/redmine/wiki/RedmineUpgrade)
 
 아래는 요점사항을 정리한 내용임.
 
@@ -97,7 +98,7 @@ rdoc을 업데이트 하세요.
 gem update rdoc
 ```
 
-## 추가설치 패키지 다른방법
+## 추가설치 패키지 다른방법 (이방법 사용 설치)
 
 brew을 이용해 설치하는 방법입니다. 이때에는 Path 환경변수를 넣어줄 필요가 없습니다.
 
@@ -105,12 +106,12 @@ brew을 이용해 설치하는 방법입니다. 이때에는 Path 환경변수�
 
 ```
 $ brew install imagemagick
-==> /usr/local/Cellar/imagemagick/6.9.1
+==> /usr/local/Cellar/imagemagick/6.9.0
 
 $ brew install pkgconfig
-==> /usr/local/Cellar/pkg-config/0.26
+==> /usr/local/Cellar/pkg-config/0.28
 
-$ C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.6-3/include/ImageMagick-6 PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick/6.8.6-3/lib/pkgconfig/ gem install rmagick
+$ C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.9.0-3/include/ImageMagick-6 PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick/6.9.0-3/lib/pkgconfig/ sudo gem install rmagick
 Successfully installed rmagick-2.14.0
 ```
 
