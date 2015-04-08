@@ -117,6 +117,8 @@ Successfully installed rmagick-2.14.0
 
 ### Redmine 설치하기
 
+http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer
+
 특정볼더 밑에 redmine을 다운로드 받아 설치한다. 현재 2015/04/08 일 현재 3.0.1 (2015-03-16), 2.6.3 (2015-03-16) 버전이 나와 있습니다. 나의 경우에는 2.6.3 버전을 설치 하였습니다.
 
 레드마인 설치 폴덩의 설정디렉토리에 파일을 하나 만들어야 합니다. 직접이동할 필요는 없습니다. config 디렉토리인데 그 안에 보면 database.yml.example 이라는 파일이 있고 이 파일을 database.yml 로 copy 해서 복사본 하나 만들어 줍니다.
