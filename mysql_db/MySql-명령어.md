@@ -16,8 +16,13 @@ $> mysql -u root -p [[DBName]] < [[DumpFileName]]
 
 ```cmd
 CREATE DATABASE [database];
+
 GRANT ALL PRIVILEGES ON [database].* TO root@'%';
+
+or
+
 GRANT ALL PRIVILEGES ON [database].* TO 'root'@'%' IDENTIFIED BY 'xxxxxx' WITH GRANT OPTION;
+
 FLUSH PRIVILEGES;
 ```
 
