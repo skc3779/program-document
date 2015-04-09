@@ -50,6 +50,11 @@ Redmine은 XCode에 내장되어 있는 Ruby로 빌드한다. 그러나 어떤 �
 
 GEM을 이용해 rails bundler passenger를 인스톨한다.
 ```console
+이것으로 설치 그러나 rails 가 설치되지 않는 현상이 있음.
+sudo gem install rails bundler 
+
+or
+passenger 는 설치할 필요가 없음 사용안함.
 sudo gem install rails bundler passenger
 
 ```
@@ -121,6 +126,7 @@ $ brew install pkgconfig
 $ C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.9.0-3/include/ImageMagick-6 PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick/6.9.0-3/lib/pkgconfig/ sudo gem install rmagick
 Successfully installed rmagick-2.14.0
 ```
+$ C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.9.1-0/include/ImageMagick-6 PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick/6.9.1-0/lib/pkgconfig/ sudo gem install rmagick
 
 
 ### Redmine 설치하기
