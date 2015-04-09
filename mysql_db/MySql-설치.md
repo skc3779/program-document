@@ -82,3 +82,71 @@ sudo rm -rf /Library/Receipts/MySQL*
 sudo rm -rf /var/db/receipts/com.mysql.*
  
 ```
+
+## brew을 이용한 mysql 설치하기
+
+http://blog.saltfactory.net/121 참고하기
+
+```
+$> brew search mysql --> brew 에 mysql이 있는지 확인
+
+$> brew info mysql --> brew에 등록된 최신 mysql을 확인
+
+$> brew install mysql --> mysql 설치
+
+$> ls /usr/local/Cellar/mysql/ --> 설치버전 확인
+
+```
+
+설치 후 실행방식 자동실행, 수동실행 방법
+
+```
+
+To have launchd start mysql at login:
+    ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+
+Then to load mysql now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+
+Or, if you don't want/need launchctl, you can just run:
+    mysql.server start
+
+```
+
+개인적으로 마지막의 수동실행방법을 선호 한다
+
+일단 /etc/my.cnf 파일이 있는지 확인하고 없으면 /usr/local/Cellar/mysql/5.6.23/support-files 폴더에서 my-default.cnf 파일을 복사해온다.
+
+```cmd
+$> cp /usr/local/Cellar/mysql/5.6.23/support-files/my-default.cnf /etc/my.cnf
+```
+
+이후는 위의 같이 밑의 내용을 추가한다
+
+```txt
+[mysqld]
+character-set-server=utf8
+collation-server=utf8_general_ci
+
+init_connect=SET collation_connection=utf8_general_ci
+init_connect=SET NAMES utf8
+
+[client]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+```
+
+# bash_profile에  환경path를 등록한다
+
+```
+export PATH="/usr/local/Cellar/mysql/5.6.23/bin:$PATH"
+```
+
+mysql 재시작하기
+
+```
+$> mysql.server restart
+```
+

@@ -35,6 +35,13 @@ GRANT ALL PRIVILEGES ON redmine.* TO 'redmine'@'localhost';
 
 ```console
 sudo ln -s /usr/local/mysql/lib/libmysqlclient.18.dylib  /usr/lib/libmysqlclient.18.dylib
+
+or
+
+brew 설치의 경우
+
+sudo ln -s /usr/local/Cellar/mysql/5.6.23/lib/libmysqlclient.18.dylib /usr/lib/libmysqlclient.18.dylib
+
 ```
 
 ## Redmine 준비사항
