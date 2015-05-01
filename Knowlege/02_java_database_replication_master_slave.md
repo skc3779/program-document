@@ -1,4 +1,4 @@
-# Java에서 DataBase Replication Master/Slave 분기방법
+# Java Database Replication Master/Slave 분기방법
 
 Java에서 Master/Slave 분기처리를 하는 4 가지 정도의 방법
 
@@ -57,10 +57,12 @@ TransactionManager 선별 -> DataSource에서 Connection 획득 -> Transaction �
 여기서 보면 트랜잭션 동기화를 마친 뒤에 [ReplicationRoutingDataSource.java](https://github.com/kwon37xi/replication-datasource/blob/master/src/test/java/kr/pe/kwonnam/replicationdatasource/routingdatasource/ReplicationRoutingDataSource.java)에서 커넥션을 획득해야만 이게 올바로 동작하는데 그 순서가 뒤바뀌어 있기 때문이다.
 
 해결방법 ?
-[ReplicationRoutingDataSource.java](https://github.com/kwon37xi/replication-datasource/blob/master/src/test/java/kr/pe/kwonnam/replicationdatasource/routingdatasource/ReplicationRoutingDataSource.java) 를 [LazyConnectionDataSoruceProxy로](http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/LazyConnectionDataSourceProxy.html)로 감사준다.
 
-[LazyConnectionDataSoruceProxy]((http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/LazyConnectionDataSourceProxy.html) ?
-실질적인 쿼리 실행 여부와 상관없이 트랜잭션이 걸리면 무조건 Connection 객체를 확보하는 Spring의 단점을 보완하여 트랜잭션 시작시에 Connection Proxy 객체를 리턴하고 실제로 쿼리가 발생할 때 데이터소스에서 getConnection()을 호출하는 역할
+> [ReplicationRoutingDataSource.java](https://github.com/kwon37xi/replication-datasource/blob/master/src/test/java/kr/pe/kwonnam/replicationdatasource/routingdatasource/ReplicationRoutingDataSource.java) 를 [LazyConnectionDataSoruceProxy로](http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/LazyConnectionDataSourceProxy.html)로 감사준다.
+
+[LazyConnectionDataSoruceProxy](http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/LazyConnectionDataSourceProxy.html) ?
+
+> 실질적인 쿼리 실행 여부와 상관없이 트랜잭션이 걸리면 무조건 Connection 객체를 확보하는 Spring의 단점을 보완하여 트랜잭션 시작시에 Connection Proxy 객체를 리턴하고 실제로 쿼리가 발생할 때 데이터소스에서 getConnection()을 호출하는 역할
 
 작동 순서
 ```
