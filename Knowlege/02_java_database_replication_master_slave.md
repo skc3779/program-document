@@ -68,6 +68,7 @@ TransactionManager 선별 -> DataSource에서 Connection 획득 -> Transaction �
 ```
 TransactionManager 선별 -> LazyConnectionDataSourceProxy에서 Connection Proxy 객체 획득 -> Transaction 동기화(Synchronization) -> 실제 쿼리 호출시에 ReplicationRoutingDataSource.getConnection()/determineCurrentLookupKey() 호출
 ```
+
 실제 설정은 다음과 같고, 좀 더 자세한 것은 [WithRoutingDataSourceConfig.java](https://github.com/kwon37xi/replication-datasource/blob/master/src/test/java/kr/pe/kwonnam/replicationdatasource/config/WithRoutingDataSourceConfig.java)를 확인.
 
 ```java
