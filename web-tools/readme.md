@@ -10,7 +10,7 @@
 
 ## 2. Polymer
 
-#### 웹 컴포넌트를 위한 Polyfill 라이브러리 프로젝트 
+#### 웹 컴포넌트를 위한 Polyfill 라이브러리 프로젝트
 
 ## 3. Bricks
 
