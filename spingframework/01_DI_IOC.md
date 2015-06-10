@@ -27,7 +27,7 @@
         
 	각 계층 사이, 각 클래스 사이에 필요로 하는 의존 관계를 컨테이너가 자동으로 연결해주는것 각 클래스 사이의 의존 관계를 빈 설정(Bean Definition) 정보를 바탕으로 컨테이너가 자동으로 연결해 주는 것 DL 사용 시 컨테이너 종속성이 증가하여, 이를 줄이기 위하여 DI를 사용
 
-	- **Setter Injection **
+	- **Setter Injection**
 
         1. 인자가 없는 생성자나 인자가 없는 static factory 메소드가 bean을 인스턴스화 하기 위하여 호출된 후 bean의 setter 메소드를 호출하여 실체화하는 방법    
         2. 객체를 생성 후 의존성 삽입 방식이기에 구현시에 좀더 유연하게 사용할 수 있다.
@@ -43,11 +43,11 @@
         5. 조립기 입장에서는 생성의 순서를 지켜야 하기에 상당히 불편하다.
         6. Spring 프레임워크의 빈 설정 파일에서 constructor-arg 사용
 
-	- **Method Injection **
+	- **Method Injection**
 	
  		Singleton 인스턴스와 Non Singleton 인스턴스의 의존 관계를 연결 시킬 필요가 있을 경우 사용하지만, 많이 사용하지는 않는다.
 
-* **Setter Injection 예제 **
+* **Setter Injection 예제**
 
 ```xml
 <bean id="exampleBean" class="examples.ExampleBean">
