@@ -6,12 +6,7 @@
 
 
 ```java
-//엔티티 매니저 팩토리 생성
-EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpademo");
-//엔티티 매니저 생성
-EntityManager em = emf.createEntityManager();
-//트랜잭션 기능 획득
-EntityTransaction tx = em.getTransaction();
+`
 
 //트랜젝션 시작
 tx.begin();
