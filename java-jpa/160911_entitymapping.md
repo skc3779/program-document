@@ -199,6 +199,147 @@ public class Member {
 @Access     JPA가 엔티티에 접근하는 방식을 지정한다.
 
 
+주요 컬럼매핑 필드 몇가지만 설명해 본다.
+
+#### @Enumerated
+
+자바의 enum 타입을 매핑에 해당된다.
+
+```java
+enum RoleType {
+	ADMIN, USER
+}
+```
+
+```java
+@Enumerated(EnumType.STRING)
+@Column(name = "role_type")
+private RoleType roleType;
+```
+
+EnumType.ORDINAL는 enum에 정의된 순서대로 ADMIN은 0, USER 1 값이 데이터베이스에 저장된다.
+EnumType.STRING은 enum 이름 그대로 ADMIN은 'ADMIN', USER는 'USER'라는 문자로 데이터베이스에 저장된다.
+
+권장은 EnumType.STRING 이다. ORDINAL 의 경우 중간에 열거값을 추가 시 데이터베이스의 값이 밀리게 되는 문제가 발생 하게된다.
+
+#### @Temporal
+
+날짜 타입(java.util.Date, java.util.Calendar)을 매핑할 때 사용한다.
+
+```java
+// 날짜
+@Temporal (TemporalType.DATE)
+private Date date;
+
+// 시간
+@Temporal (TemporalType.TIME)
+private Date time;
+
+// 날짜와 시간
+@Temporal (TemporalType.TIMESTAMP)
+private Date timestamp;
+```
+
+#### @Lob
+
+데이터베이스 BLOB, CLOB 타입과 매핑한다.
+
+```java
+
+// CLOB 문자열 데이터
+@Lob
+private String lobSgtring;
+
+// BLOB 바이트 데이터
+@Lob
+private byte[] lobByte;
+```
+
+
+#### @Transient
+
+이 어노테이션을 사용 시 필드는 매핑하지 않는다. 데이터베이스에 저장하지 않고 조회하지도 않는 어떤 값을 보관하고 싶을 때 사용한다.
+
+```java
+
+@Transient
+private String temp;
+```
+
+
+#### @Access
+
+JPA가 엔티티 데이터에 접근하는 방식을 지정한다.
+
+**@Access(AccessType.FIELD)**
+> @Id, @Column 등이 필드에 매핑하는 방식
+
+```java
+@Entity
+@Access(AccessType.FIELD)
+public class Member {
+	@Id
+    private String Id;
+    
+    @Column
+    private String userName;
+}
+```
+
+**@Access(AccessType.PROPERY)**
+> @Id, @Column 등이 프로퍼티에 매핑하는 방식
+
+```java
+@Entity
+@Access(AccessType.PROPERY)
+public class Member {
+    private String Id;    
+    private String userName;
+    
+    @Id
+    public String getId() {
+    	return this.id;
+    }
+    
+    @Column
+    public String getUserName() {
+    	return this.userName;
+    }
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
