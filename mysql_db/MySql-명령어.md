@@ -1,20 +1,20 @@
-# 명령어
+# MySQL 명령어
 
-## MySql 백업하기
+### MySql 백업하기
 
 데이터베이스를 백업하기 위해서는 아래와 같은 명령어를 사용하시면 됩니다.
-```cmd
+```bash
 $> mysqldump -u root -p -h 192.168.13.XXX [[DBName]] > [[DumpFileName]]
 ```
 
 데이터베이스 백업파일을 Import하기 위해서는 아래와 같은 명령어를 사용하시면 됩니다.
-```cmd
+```bash
 $> mysql -u root -p [[DBName]] < [[DumpFileName]]
 ```
 
-## 데이터베이스 생성 및 권한 주기
+### 데이터베이스 생성 및 권한 주기
 
-```cmd
+```sql
 CREATE DATABASE [database];
 GRANT ALL PRIVILEGES ON [database].* TO root@'%';
 GRANT ALL PRIVILEGES ON [database].* TO 'root'@'%' IDENTIFIED BY 'xxxxxx' WITH GRANT OPTION;
@@ -27,21 +27,21 @@ FLUSH PRIVILEGES;
 
 * `FLUSH PRIVILEGES`으로 권한을 적용합니다.
 
-## MySql 접속하기
+### MySql 접속하기
 
-```cmd
+```bash
 $> mysql --host=localhost --user=myname --password=mypass mydb
 $> mysql -h localhost -u myname -p mydb
 password:mypass
 
 ```
 
-## MySql root 패스워드 변경
+### MySql root 패스워드 변경
 
 /usr/local/mysql/bin에 보시면 mysql데이터베이스를 관리하는 몇가지 유용한 명령어 들이 있습니다.
 mysqladmin이라는 명령어는 mysql을 시작, 종료, 재시작등을 할 수 있는 중요한 명령어가 있습니다.
 
-```cmd
+```bash
 $> pwd
 /usr/local/mysql/bin
 $> ./mysqladmin -u root -p password xxxxxx
@@ -49,7 +49,7 @@ Enter password
 ```
 mysql의 set이란 명령어로 root 암호로 변경 할 수 있습니다.
 
-```cmd
+```bash
 $> ./mysql -u root -p [database name]
 Enter password:
 
@@ -60,7 +60,7 @@ Query OK
 
 또 다른 방법
 
-```cmd
+```bash
 $> ./mysql -u root -p [database name]
 Enter password:
 
@@ -75,7 +75,7 @@ Query Ok
 
 MySql 서버는 기동하면서 설정 파일의 내용을 읽어 메모리나 작동방식을 초기화 하고 접속된 사용자를 제어하기 위해 설정값을 별도로 저장해 두는데  이렇게 저장된 값을 변수(Valiable)라고 한다.
 
-```cmd
+```bash
 
 mysql> show global variables;
 ```
@@ -105,8 +105,48 @@ MySQL 5.1 또는 이후 버전에 설치가능합니다.
 
 ##### `OSX`에서 Mroonga를 설치하기
 
-```cmd
+```bash
 $> brew install https://raw.github.com/mroonga/homebrew/master/mroonga.rb --use-homebrew-mysql
 ```
+
+### 테이블/컬럼 정보보기
+
+```sql
+-- 전체 테이블 정보를 주석까지 포함해서 보여줌.
+show table status;
+
+-- 테이블 이름 매칭조건으로 보여줌.
+show table status like 'memb%';
+
+-- 테이블의 컬럼 정보를 주석까지 포함해서 보여줌.
+show full columns from 테이블명;
+```
+
+### 버전정보 확인하기
+
+```sql
+show variables like '%version%';
+```
+
+### 접속한 커텍션 리스트 
+
+```sql
+show full processlist;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
