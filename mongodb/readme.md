@@ -25,6 +25,7 @@ net:
 
 ## MongoDB 설치
 
+### MacOS에 설치하기
 ```console
 $> brew install mongodb
 ```
@@ -33,6 +34,32 @@ SSL 지원 MongoDB 바이너리 설치
 
 ```console
 $> brew install mongodb --with-openssl
+```
+
+### Windows에 설치하기
+
+* 공식홈페이지
+https://www.mongodb.com/download-center?jmp=homepage#community
+
+* 다운로드후 설치
+* 실행파일 "mongod.cmd"
+```
+CD C:\Tools\MongoDB\Server\3.4\bin
+mongod --dbpath "C:\Tools\MongoDB\DB" --config "C:\Tools\MongoDB\conf\mongod.conf"
+```
+
+* 환경파일 "mongod.conf", [메뉴얼참고](https://docs.mongodb.com/manual/reference/configuration-options/#file-format)
+```
+systemLog:
+   destination: file
+   path: "C:/Tools/MongoDB/logs/mongod.log"
+   logAppend: true
+storage:
+   journal:
+      enabled: true
+net:
+   bindIp: 0.0.0.0
+   port: 27017
 ```
 
 ## MongoDB 실행
@@ -60,6 +87,16 @@ $> mongod --dbpath /usr/local/var/mongodb
 2014-11-24T17:29:19.642+0900 [initandlisten] waiting for connections on port 27017
 ```
 
+## MongoDB Data Import
+* Import data into the collection.
+* [메뉴얼참고](https://docs.mongodb.com/getting-started/shell/import-data/)
+* [샘플 콜랙션](https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json)
+```
+CD "C:\Tools\MongoDB\Server\3.4\bin"
+mongoimport --db mongodb_tutorial --collection restaurants --drop --file "C:\Tools\MongoDB\data\primer-dataset.json"
+```
+
+
 ## MongoDB 사용법
 
 `mongo`명령어를 이용해 접속
@@ -74,6 +111,9 @@ MongoDB shell version: 2.6.5
 connecting to: test
 
 ```
+
+### Tutorial 사용법
+https://docs.mongodb.com/getting-started/shell/
 
 ###  명령어
 
@@ -153,3 +193,5 @@ http://mongodb.github.io/node-mongodb-native/2.0/api-docs/
 mongodb manual
 http://docs.mongodb.org/manual/tutorial/generate-test-data/
 
+velopert.log
+https://velopert.com/457
