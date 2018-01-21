@@ -112,13 +112,14 @@ Or, if you don't want/need launchctl, you can just run:
     mysql.server start
 
 ```
+개인 환경설정을 위해서는 my.cnf 파일을 설정해 주면된다.
+위와 같이 mysql.server Shell 파일을 이용해 실행 할 때에는
+/usr/local/Cellar/mysql/5.7.xx/ 밑에 my.cnf 파일을 위치 시켜야 합니다.
 
-개인적으로 마지막의 수동실행방법을 선호 한다
-
-일단 /etc/my.cnf 파일이 있는지 확인하고 없으면 /usr/local/Cellar/mysql/5.6.23/support-files 폴더에서 my-default.cnf 파일을 복사해온다.
+*my.cnf 파일 위치에 대해서 한번더 체크해 볼 필요가 있음.*
 
 ```cmd
-$> cp /usr/local/Cellar/mysql/5.6.23/support-files/my-default.cnf /etc/my.cnf
+$> cd /usr/local/Cellar/mysql/5.7.xxx/my.cnf
 ```
 
 이후는 위의 같이 밑의 내용을 추가한다
