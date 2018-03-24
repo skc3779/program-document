@@ -1,6 +1,7 @@
 # Print And Pdf
 
 ### Cups-pdf for Windows
+
 http://ccm.net/faq/29935-cups-pdf-for-windows
 
 ### Virtual PDF Printer for our small office network – a step by step how to
@@ -16,3 +17,8 @@ https://www.steveroot.co.uk/2014/11/22/virtual-pdf-printer-for-our-small-office-
 5. For the printer model
 Vendor = Microsoft
 Driver = Microsoft PS Class driver
+
+
+### CUPS 및 삼바를 활용하여 프린터 설치 및 관리
+    
+    https://wiki.gentoo.org/wiki/Printing/ko

@@ -29,3 +29,10 @@ java -jar pdfbox-app-2.0.8.jar WriteDecodedDoc charactor1.pdf charactor1.out.doc
 ### PDFToImage를 이미지로 변환한다.
 
 java -jar pdfbox-app-2.0.8.jar PDFToImage -imageType png charactor1.pdf  -outputPrefix out
+
+### Report View (jspdf)
+
+    https://brunch.co.kr/@ourlove/60
+
+
+    
