@@ -16,16 +16,29 @@ $> mysql -u root -p [[DBName]] < [[DumpFileName]]
 
 ```sql
 CREATE DATABASE [database];
-GRANT ALL PRIVILEGES ON [database].* TO root@'%';
-GRANT ALL PRIVILEGES ON [database].* TO 'root'@'%' IDENTIFIED BY 'xxxxxx' WITH GRANT OPTION;
+CREATE USER 'testuser'@'%' IDENTIFIED BY 'xxxxxx';
+CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'xxxxxx';
+GRANT ALL PRIVILEGES on [database].* TO 'testuser'@'%';
+GRANT INSERT,UPDATE,INDEX,ALTER ON on [database].* TO 'testuser'@'%';
+GRANT INSERT,UPDATE,INDEX,ALTER ON on [database].* TO 'testuser'@'localhost';
 FLUSH PRIVILEGES;
+```
+```sql
+GRANT ALL PRIVILEGES ON [database].* TO 'root'@'%' IDENTIFIED BY 'xxxxxx' WITH GRANT OPTION;
 ```
 
 * `[database].*` 특정 데이터베이스에 권한을 지정합니다. 만일 `*.*` 이렇게 하면 모든 데이터베이스에 권한을 지정하게 됩니다.
-
+* `'testuser'@'%'` 원격접속지원 `'testuser'@'localhost'` 로컬에서만 접속 지원. 
 * `GRANT` 문장이 실행될 때 지정된 사용자가 존재하지 않으면 먼저 해당 사용자를 생성하고 권한을 부여합니다. 이경우에는 `IDENTIFIED BY` 절을 이용해 사용자의 비밀번호까지 설정할 수 있습니다. `WITH GRANT OPTION` 권한은 다른 권한과 달리 GRANT 문장의 마지막에 부여합니다.
 
 * `FLUSH PRIVILEGES`으로 권한을 적용합니다.
+
+```sql
+DROP DATABASE [database]; -- database 삭제
+DROP USER 'testuser'@'localhost'; -- 사용자 삭제
+REVOKE ALL ON testdb.* FROM 'testuser'@'localhost'; -- 모든 권한 제거
+REVOKE DROP ON testdb.* FROM 'testuser'@'localhost'; -- 특정 명령어에 대한 권한을 제거
+```
 
 ### MySql 접속하기
 
