@@ -1,6 +1,6 @@
-# Intellij 1.4 기능 정의
+### Intellij 1.4 기능 정의
 
-## 1. Intellij IDEA에서 파일 인코딩 설정 및 로케일 언어 출력
+#### 1. Intellij IDEA에서 파일 인코딩 설정 및 로케일 언어 출력
 
 Preferences > File Encodeings 에서  Transparent native-to-ascii convertion 을 체크해 주면 .properties 한글을 입력하게 되면 자동으로  UTF-8  인코딩값으로 변환하여 등록하게 되며,  Editor 에서는 한글로 표시됩니다.
 
@@ -8,7 +8,7 @@ Preferences > File Encodeings 에서  Transparent native-to-ascii convertion 을
 
 ![File Encodings](images/new_01_01.jpg)
 
-## 2. Tool Buttons 
+#### 2. Tool Buttons 
 
 Menu > View > Tool Buttons
 
@@ -17,7 +17,7 @@ Intellij의 Gradle, Maven, Commander, IDETalk, Bean Validation 등의 Tool Windo
 ![Tool Buttons](images/new_02.jpg)
 
 
-## 3. live templates
+#### 3. live templates
 
 자동으로 구문을 완성해주는 기능이 있다.
 
@@ -37,3 +37,17 @@ private static final Logger log = LoggerFactory.getLogger($CLASS_NAME$.class);
 이때 `$CLASS_NAME$`는 대체해주고자 하는 문자로  Edit variables 버튼을 눌러 Expression 메소드와 매칭을 해준다.
 
 ![Live Template](images/new_03.jpg)
+
+#### 4. intellij mybatis mapper 'could not autowired'
+
+* intellij mybatis mapper autowired 컴파일(?) 에러 또는 Idea 창에 could not autowired 문제가 발생
+
+*  Autowiring for Bean Class 모두 제거하는 방법 (?)
+    > Settings - Editor - Inspections - Spring - Spring Core - Code - Autowiring for Bean Class - disable
+
+* mybatis autowired 문제만 해결하는 방법
+    > mybatis plugin을 설치한다.
+    > setting > plugin > browser plugin > Mybatis Plugin 설치
+
+
+http://meaownworld.tistory.com/143

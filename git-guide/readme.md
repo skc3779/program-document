@@ -116,12 +116,24 @@ git push origin master
 Project Menu (우측마우스) -> Git -> Repository -> Branch... 팝업메뉴 중에서 변경하고자 하는 브랜치를 선택
 
 
+## ssh key 생성
 
+### Windows 에서 ssh key 생성
 
+git bash 사용
 
+```
+C:\Users\<윈도우계정>\.ssh
+```
 
+> https://opentutorials.org/module/2113/12295
 
+> http://bit.ly/2roh2MW
 
+> http://bit.ly/2wkmm8Z
 
+## git 학습
+
+> https://opentutorials.org/course/1492/8145
 
 
