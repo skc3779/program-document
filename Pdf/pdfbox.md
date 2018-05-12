@@ -33,6 +33,19 @@ java -jar pdfbox-app-2.0.8.jar WriteDecodedDoc charactor1.pdf charactor1.out.doc
 
 java -jar pdfbox-app-2.0.8.jar PDFToImage -imageType png charactor1.pdf  -outputPrefix out
 
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180418170820.pdf  -outputPrefix 21_BML_NK세포활성도_검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180509113150.pdf  -outputPrefix 25_BML_유전체검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180418170859.pdf  -outputPrefix 26_골대사검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180418170342.pdf  -outputPrefix 27_수면검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180418170251.pdf  -outputPrefix 30_녹십자_중금속검사 
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180419152715.pdf  -outputPrefix 31_녹십자_활성산소검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180418170337.pdf  -outputPrefix 32_메디젠_유전자검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180418165844.pdf  -outputPrefix 28_녹십자_알레르기검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180418170208.pdf  -outputPrefix 29_녹십자_알레르기검사
+
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180509113417.pdf  -outputPrefix 212_BML_NK세포활성도_검사
+java -jar c:/tools/pdfbox/pdfbox-app-2.0.8.jar PDFToImage -imageType png IH20180508172803.pdf  -outputPrefix 213_BML_NK세포활성도_검사
+
 ### Report View (jspdf)
 
     https://brunch.co.kr/@ourlove/60
@@ -45,3 +58,4 @@ Usage: java -jar pdfbox-app-x.y.z.jar PDFSplit [OPTIONS] <PDF file>
 ```
 java -jar pdfbox-app-2.0.8.jar PDFSplit -startPage 1 -endPage 12 -outputPrefix OUT IH20180326075759.pdf 
 ```
+
