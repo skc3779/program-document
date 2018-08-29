@@ -147,7 +147,9 @@ show variables like '%version%';
 show full processlist;
 ```
 
+### 데이터베이스 이동
 
+https://opentutorials.org/module/894/6654
 
 
 
